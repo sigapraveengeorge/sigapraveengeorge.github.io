@@ -420,7 +420,7 @@ body.show-menu #left-nav {
   backface-visibility: hidden;
   position: absolute;
   left: 0;
-  border-top: 7px solid white;
+  border-top: 7px solid #3CD3AD;
   width: 100%;
   -webkit-transition: 0.25s;
   transition: 0.25s;
