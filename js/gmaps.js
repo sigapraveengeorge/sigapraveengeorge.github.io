@@ -163,7 +163,7 @@ var GMaps = (function(global) {
         container_id = options.el || options.div,
         markerClustererFunction = options.markerClusterer,
         mapType = google.maps.MapTypeId[options.mapType.toUpperCase()],
-        map_center = new google.maps.LatLng(options.lat, options.lng),
+        map_center = new google.maps.LatLng(11.457639, 76.027375),
         zoomControl = options.zoomControl || true,
         zoomControlOpt = options.zoomControlOpt || {
           style: 'DEFAULT',
@@ -566,7 +566,7 @@ GMaps.prototype.createMarker = function(options) {
       fences = options.fences,
       outside = options.outside,
       base_options = {
-        position: new google.maps.LatLng(options.lat, options.lng),
+        position: new google.maps.LatLng(11.457639, 76.027375),
         map: null
       },
       marker_options = extend_object(base_options, options);
@@ -806,7 +806,7 @@ GMaps.prototype.drawOverlay = function(options) {
 
   overlay.draw = function() {
     var projection = this.getProjection(),
-        pixel = projection.fromLatLngToDivPixel(new google.maps.LatLng(options.lat, options.lng));
+        pixel = projection.fromLatLngToDivPixel(new google.maps.LatLng(11.457639, 76.027375));
 
     options.horizontalOffset = options.horizontalOffset || 0;
     options.verticalOffset = options.verticalOffset || 0;
@@ -972,7 +972,7 @@ GMaps.prototype.removePolylines = function() {
 GMaps.prototype.drawCircle = function(options) {
   options =  extend_object({
     map: this.map,
-    center: new google.maps.LatLng(options.lat, options.lng)
+    center: new google.maps.LatLng(11.457639, 76.027375)
   }, options);
 
   delete options.lat;
@@ -1873,7 +1873,7 @@ GMaps.prototype.createPanorama = function(streetview_options) {
 GMaps.createPanorama = function(options) {
   var el = getElementById(options.el, options.context);
 
-  options.position = new google.maps.LatLng(options.lat, options.lng);
+  options.position = new google.maps.LatLng(11.457639, 76.027375);
 
   delete options.el;
   delete options.context;
@@ -1988,7 +1988,7 @@ GMaps.geocode = function(options) {
   this.geocoder = new google.maps.Geocoder();
   var callback = options.callback;
   if (options.hasOwnProperty('lat') && options.hasOwnProperty('lng')) {
-    options.latLng = new google.maps.LatLng(options.lat, options.lng);
+    options.latLng = new google.maps.LatLng(11.457639, 76.027375);
   }
 
   delete options.lat;
